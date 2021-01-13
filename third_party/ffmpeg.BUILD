@@ -2,26 +2,7 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "avcodec",
-    hdrs = [
-        "libavcodec/ac3_parser.h",
-        "libavcodec/adts_parser.h",
-        "libavcodec/avcodec.h",
-        "libavcodec/avdct.h",
-        "libavcodec/avfft.h",
-        "libavcodec/d3d11va.h",
-        "libavcodec/dirac.h",
-        "libavcodec/dv_profile.h",
-        "libavcodec/dxva2.h",
-        "libavcodec/jni.h",
-        "libavcodec/mediacodec.h",
-        "libavcodec/qsv.h",
-        "libavcodec/vaapi.h",
-        "libavcodec/vdpau.h",
-        "libavcodec/version.h",
-        "libavcodec/videotoolbox.h",
-        "libavcodec/vorbis_parser.h",
-        "libavcodec/xvmc.h",
-    ],
+    hdrs = glob(["libavcodec/*.h"]),
     includes = ["."],
     linkopts = [
         "-lavcodec",
